@@ -1,0 +1,50 @@
+# rlmx.yaml — codebase-specialized config (auto-provisioned)
+# Re-generate with: python3 scripts/provision-rlmx.py
+#
+# Live tools (TOOLS.md) replace static REPO_INDEX/RECENT_PRS — every codebase
+# fact is fetched fresh via rtk-wrapped subprocess at REPL time. No staleness.
+
+model:
+  provider: google
+  model: gemini-3.1-flash-lite-preview
+  sub-call-model: gemini-3.1-flash-lite-preview
+
+context:
+  extensions:
+    - .md
+  exclude:
+    - node_modules
+    - .git
+    - dist
+    - build
+    - .next
+    - .turbo
+    - target
+    - .cache
+    - coverage
+    - .pnpm-store
+    - .vercel
+    - _archive
+    - out
+    - tmp
+    - .venv
+    - __pycache__
+    - .rlmx/data
+    - .rlmx/sessions
+    - .rlmx/benchmarks
+
+budget:
+  max-cost: null
+  max-tokens: null
+  max-depth: null
+
+tools-level: standard
+
+storage:
+  enabled: auto
+  mode: persistent
+  data-dir: ~/.rlmx/data
+  port: 0
+  chunk-size: null
+  chunk-utilization: 0.6
+  chars-per-token: 4
