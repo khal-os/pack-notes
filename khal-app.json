@@ -1,0 +1,29 @@
+{
+	"$schema": "https://khal.os/schemas/khal-app.json",
+	"id": "notes",
+	"name": "Notes",
+	"version": "0.0.1",
+	"icon": "/icons/dusk/note.svg",
+	"description": "Create, edit, and manage personal notes",
+	"author": "khal-os",
+	"permissions": ["nats:publish", "nats:subscribe"],
+	"services": [
+		{
+			"name": "notes-service",
+			"entry": "./views/notes/service/index.ts",
+			"runtime": "node"
+		}
+	],
+	"windows": [
+		{
+			"id": "notes",
+			"title": "Notes",
+			"width": 800,
+			"height": 600
+		}
+	],
+	"frontend": {
+		"package": "@khal-os/pack-notes",
+		"entry": "default"
+	}
+}
