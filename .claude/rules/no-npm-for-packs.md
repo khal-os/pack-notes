@@ -17,7 +17,7 @@ These four packages live in `repos/app-kit/packages/` and are the **only** `@kha
 | `@khal-os/sdk` | `repos/app-kit/packages/sdk/` |
 | `@khal-os/ui` | `repos/app-kit/packages/ui/` |
 | `@khal-os/types` | `repos/app-kit/packages/types/` |
-| `@khal-os/dev-cli` | `repos/app-kit/packages/dev-cli/` |
+| `@khal-os/app-kit` | `repos/app-kit/packages/app-kit/` |
 
 Anything else under the `@khal-os/*` scope on npmjs.org is either legacy/leaked (see history below) or an unauthorized publication that must be removed.
 
