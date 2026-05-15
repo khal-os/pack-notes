@@ -23,7 +23,6 @@
 		}
 	],
 	"frontend": {
-		"package": "@khal-os/pack-notes",
 		"entry": "default"
 	}
 }
